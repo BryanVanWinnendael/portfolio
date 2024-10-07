@@ -57,7 +57,7 @@ const Nav = () => {
             </li>
           </ul>
           <ModeToggle />
-          <div className="">
+          <div className="block lg:hidden">
             <NavMobile />
           </div>
         </div>
