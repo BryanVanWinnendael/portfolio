@@ -7,12 +7,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { useState } from "react"
 
 const NavMobile = () => {
+  const [open, setOpen] = useState(false)
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={() => setOpen(true)}>
           <HamburgerMenuIcon className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Toggle theme</span>
         </Button>
@@ -54,7 +57,7 @@ const Nav = () => {
             </li>
           </ul>
           <ModeToggle />
-          <div className="lg:hidden block">
+          <div className="">
             <NavMobile />
           </div>
         </div>

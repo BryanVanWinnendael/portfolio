@@ -22,7 +22,7 @@ const Hero = () => {
         </svg>
         <p>Leuven, Belgium</p>
       </div>
-      <p className="mt-2 max-w-[70%]">
+      <p className="mt-2 lg:max-w-[70%]">
         I'm a full stack developer based in Belgium and I started this journey{" "}
         {years} years ago.
       </p>

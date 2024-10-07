@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -8,18 +7,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useEffect, useState } from "react"
 
 const modeToggle = () => {
-  const [theme, setThemeState] = React.useState<
-    "theme-light" | "dark" | "system"
-  >("theme-light")
+  const [theme, setThemeState] = useState<"theme-light" | "dark" | "system">(
+    "theme-light"
+  )
+  const [open, setOpen] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains("dark")
     setThemeState(isDarkMode ? "dark" : "theme-light")
   }, [])
 
-  React.useEffect(() => {
+  useEffect(() => {
     const isDark =
       theme === "dark" ||
       (theme === "system" &&
@@ -28,9 +29,9 @@ const modeToggle = () => {
   }, [theme])
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={() => setOpen(true)}>
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
