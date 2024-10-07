@@ -1,0 +1,116 @@
+---
+import {
+  DockerIcon,
+  FastApiIcon,
+  NextJSIcon,
+  ReduxIcon,
+} from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import MailImage from "@/assets/images/unimail/unimail1.webp"
+import MailImage2 from "@/assets/images/unimail/unimail2.webp"
+import MailImage3 from "@/assets/images/unimail/unimail3.webp"
+import MailImage4 from "@/assets/images/unimail/unimail4.webp"
+import MailImage5 from "@/assets/images/unimail/unimail5.webp"
+import MailImage6 from "@/assets/images/unimail/unimail6.webp"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+        ><ChevronLeft size={16} /> back</a
+      >
+    </div>
+    <video
+      class="w-full h-full rounded-lg"
+      autoplay
+      loop
+      muted
+      playsinline
+      src="/public/videos/unimail.mp4"></video>
+    <h1
+      class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2"
+    >
+      UniMail
+    </h1>
+    <div class="my-2 flex gap-2 flex-wrap">
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <NextJSIcon width={24} height={24} /> Next.js
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <ReduxIcon width={24} height={24} /> Redux
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <FastApiIcon width={24} height={24} /> FastAPI
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <DockerIcon width={24} height={24} /> Docker
+      </div>
+    </div>
+    <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+      Web application that consolidates multiple email accounts into a single
+      interface.
+    </p>
+    <div class="flex gap-2 mt-2">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+        ><a href="https://unimail.vercel.app/" target="_blank">Visit</a></Button
+      >
+      <a
+        href="https://github.com/BryanVanWinnendael/UniMail"
+        target="_blank"
+        class="hover:text-blue-500 duration-100 flex items-center"
+        >View Code <ChevronRight size={16} /></a
+      >
+    </div>
+    <div class="mt-4 flex flex-col gap-4">
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Overview
+        </h2>
+        <p>
+          UniMail is a web application that consolidates multiple email accounts
+          into a single interface, allowing users to log in and manage all their
+          emails in one place. The app offers features such as full-screen email
+          viewing, theme customization, and adjustable email views.
+          Additionally, UniMail integrates Groq AI to provide email
+          summarization, enhancing the user experience by quickly condensing
+          email content for easier reading.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Built with
+        </h2>
+        <p>
+          The client is built with Nextjs, Redux and Tailwind CSS. The server is
+          built with FastAPI, Docker and is self hosted on a linux server.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Screenshots
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <img class="rounded-lg" src={MailImage.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={MailImage2.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={MailImage3.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={MailImage4.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={MailImage5.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={MailImage6.src} alt="Noted screenshot" />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

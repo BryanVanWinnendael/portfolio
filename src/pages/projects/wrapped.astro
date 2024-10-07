@@ -1,0 +1,123 @@
+---
+import {
+  PhoenixIcon,
+  ElixirIcon,
+  MysqlIcon,
+  NextJSIcon,
+  FastApiIcon,
+} from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import WrappedImage from "@/assets/images/wrapped/wrapped.webp"
+import WrappedImage2 from "@/assets/images/wrapped/wrapped2.webp"
+import WrappedImage3 from "@/assets/images/wrapped/wrapped3.webp"
+import WrappedImage4 from "@/assets/images/wrapped/wrapped4.webp"
+import WrappedImage5 from "@/assets/images/wrapped/wrapped5.webp"
+import WrappedImage6 from "@/assets/images/wrapped/wrapped6.webp"
+import { ChevronLeft } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+        ><ChevronLeft size={16} /> back</a
+      >
+    </div>
+    <img class="w-full h-full rounded-lg" src={WrappedImage.src} />
+  </main>
+  <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2">
+    Wrapped Now
+  </h1>
+  <div class="my-2 flex gap-2 flex-wrap">
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <NextJSIcon width={24} height={24} /> Next.js
+    </div>
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <FastApiIcon width={20} height={20} /> FastAPI
+    </div>
+  </div>
+  <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+    See your spotify wrapped any time of the year.
+  </p>
+  <div class="flex gap-2 mt-2">
+    <Button
+      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+      ><a
+        href="https://github.com/BryanVanWinnendael/Wrapped-Now"
+        target="_blank">View Code</a
+      ></Button
+    >
+  </div>
+  <div class="mt-4 flex flex-col gap-4">
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Overview
+      </h2>
+      <p>
+        Wrapped now is spotify wrapped that you can use any time of the year.
+        With wrapped now you can see your top genres, songs and artists of the
+        last 4 weeks, 6 months and all time.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Problem
+      </h2>
+      <p>
+        With spotify wrapped you can only see your top songs, artists and genres
+        of the last year. Wrapped Now allows you to see your top songs, artists
+        and genres of the last 4 weeks, 6 months and all time.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Built with
+      </h2>
+      <p>Wrapped Now is built with Next.js, Spotify API and FastAPI.</p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Screenshots
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-2">
+        <img
+          class="rounded-lg"
+          src={WrappedImage2.src}
+          alt="Noted screenshot"
+        />
+        <img
+          class="rounded-lg"
+          src={WrappedImage3.src}
+          alt="Noted screenshot"
+        />
+        <img
+          class="rounded-lg"
+          src={WrappedImage4.src}
+          alt="Noted screenshot"
+        />
+        <img
+          class="rounded-lg"
+          src={WrappedImage5.src}
+          alt="Noted screenshot"
+        />
+        <img
+          class="rounded-lg"
+          src={WrappedImage6.src}
+          alt="Noted screenshot"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>

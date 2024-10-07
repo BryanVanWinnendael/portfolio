@@ -1,0 +1,121 @@
+---
+import { FirebaseIcon, GoIcon, HtmxIcon } from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import MomezImage from "@/assets/images/momez/momez.webp"
+import MomezImage2 from "@/assets/images/momez/momez2.webp"
+import MomezImage3 from "@/assets/images/momez/momez3.webp"
+import MomezImage4 from "@/assets/images/momez/momez4.webp"
+import MomezImage5 from "@/assets/images/momez/momez5.webp"
+import MomezImage6 from "@/assets/images/momez/momez6.webp"
+import MomezImage7 from "@/assets/images/momez/momez7.webp"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+      >
+        <ChevronLeft size={16} /> back</a
+      >
+    </div>
+    <img class="w-full h-full rounded-lg" src={MomezImage.src} />
+  </main>
+  <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2">
+    Momez
+  </h1>
+  <div class="my-2 flex gap-2 flex-wrap">
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <GoIcon width={24} height={24} /> Go
+    </div>
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <HtmxIcon width={24} height={24} /> Htmx
+    </div>
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <FirebaseIcon width={24} height={24} /> Firebase
+    </div>
+  </div>
+  <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+    Social media platform for sharing pictures.
+  </p>
+  <div class="flex gap-2 mt-2">
+    <Button
+      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+      ><a href="http://141.145.200.72:8080/" target="_blank">Visit</a></Button
+    >
+    <a
+      href="https://github.com/BryanVanWinnendael/Momez"
+      target="_blank"
+      class="hover:text-blue-500 duration-100 flex items-center"
+      >View Code <ChevronRight size={16} /></a
+    >
+  </div>
+  <div class="mt-4 flex flex-col gap-4">
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Overview
+      </h2>
+      <p>
+        With Momez you can share your favorite moments in a form of a picture
+        with the world.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Problem
+      </h2>
+      <p>
+        I wanted to learn go and htmx so I decided to make a social media
+        platform where you can share your favorite moments with the world.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Built with
+      </h2>
+      <p>
+        Momez is built with Go, Htmx, Firebase, SQLite and hosted on an oracle
+        cloud server.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Features
+      </h2>
+      <p>
+        For a list of all the features, please visit the <a
+          href="https://github.com/BryanVanWinnendael/Momez"
+          target="_blank"
+          class="underline text-blue-500">github page</a
+        >.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Screenshots
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-2">
+        <img class="rounded-lg" src={MomezImage2.src} alt="Noted screenshot" />
+        <img class="rounded-lg" src={MomezImage3.src} alt="Noted screenshot" />
+        <img class="rounded-lg" src={MomezImage4.src} alt="Noted screenshot" />
+        <img class="rounded-lg" src={MomezImage5.src} alt="Noted screenshot" />
+        <img class="rounded-lg" src={MomezImage6.src} alt="Noted screenshot" />
+        <img class="rounded-lg" src={MomezImage7.src} alt="Noted screenshot" />
+      </div>
+    </div>
+  </div>
+</Layout>

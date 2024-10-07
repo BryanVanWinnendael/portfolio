@@ -1,0 +1,91 @@
+---
+import {
+  PhoenixIcon,
+  ElixirIcon,
+  MysqlIcon,
+  NextJSIcon,
+  FastApiIcon,
+  SupabaseIcon,
+  PrismaIcon,
+} from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import ChatlyImage from "@/assets/images/chatly/chatly.webp"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+        ><ChevronLeft size={16} />back</a
+      >
+    </div>
+    <img class="w-full h-full rounded-lg" src={ChatlyImage.src} />
+  </main>
+  <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2">
+    Chatly
+  </h1>
+  <div class="my-2 flex gap-2 flex-wrap">
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <NextJSIcon width={24} height={24} /> Next.js
+    </div>
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <SupabaseIcon width={20} height={20} /> Supabase
+    </div>
+    <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+      <PrismaIcon width={20} height={20} /> Prisma
+    </div>
+  </div>
+  <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+    Chat with people from around the world.
+  </p>
+  <div class="flex gap-2 mt-2">
+    <Button
+      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+      ><a href="https://chatly-bryanvanwinnendael.vercel.app/" target="_blank"
+        >Visit</a
+      ></Button
+    >
+    <a
+      href="https://github.com/BryanVanWinnendael/Chatly"
+      target="_blank"
+      class="hover:text-blue-500 duration-100 flex items-center"
+      >View Code <ChevronRight size={16} /></a
+    >
+  </div>
+  <div class="mt-4 flex flex-col gap-4">
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Overview
+      </h2>
+      <p>
+        Chatly is an online website that allows you to chat with people from
+        around the world.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Use
+      </h2>
+      <p>Go to the website and start chatting! No need to create an account.</p>
+    </div>
+    <div>
+      <h2
+        class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
+        Built with
+      </h2>
+      <p>
+        Chatly is built with Next.js, Agora, Supabase, Prisma and Tailwind CSS.
+      </p>
+    </div>
+  </div>
+</Layout>

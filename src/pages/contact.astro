@@ -1,0 +1,30 @@
+---
+import ContactForm from "@/components/contactForm"
+import { CVIcon } from "@/components/icons"
+import Layout from "@/layouts/Layout.astro"
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { MailIcon } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <h1
+      class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-left mb-2"
+    >
+      Contact me
+    </h1>
+    <div class="flex flex-wrap gap-2 my-4">
+      <a href="https://github.com/BryanVanWinnendael" target="_blank">
+        <GitHubLogoIcon width={24} height={24} /></a
+      >
+      <a href="https://linkedin.com/in/bryanvanwinnendael" target="_blank">
+        <LinkedInLogoIcon width={24} height={24} /></a
+      >
+      <a href="mailto:portfoliobryanvanwinnendael@gmail.com">
+        <MailIcon width={24} height={24} /></a
+      >
+      <a href="cv.pdf" target="_blank"> <CVIcon width={26} height={26} /></a>
+    </div>
+    <ContactForm client:load />
+  </main>
+</Layout>

@@ -1,0 +1,131 @@
+---
+import { PyQtIcon, PythonIcon } from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import DroneImage from "@/assets/images/drone/drone2.webp"
+import DroneImage2 from "@/assets/images/drone/drone3.webp"
+import DroneImage3 from "@/assets/images/drone/drone4.webp"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+        ><ChevronLeft size={16} />back</a
+      >
+    </div>
+    <video
+      class="w-full h-full rounded-lg"
+      autoplay
+      loop
+      muted
+      playsinline
+      src="/public/videos/drone.mp4"></video>
+    <h1
+      class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2"
+    >
+      Point Cloud Processor
+    </h1>
+    <div class="my-2 flex gap-2 flex-wrap">
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <PythonIcon width={24} height={24} /> Python
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <PyQtIcon width={24} height={24} /> PyQt5
+      </div>
+    </div>
+    <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+      Desktop application for detecting planes in a point cloud.
+    </p>
+    <div class="flex gap-2 mt-2">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+        ><a
+          href="https://github.com/BryanVanWinnendael/Drone_project/releases/tag/v1.0"
+          target="_blank">Download</a
+        ></Button
+      >
+      <a
+        href="https://github.com/BryanVanWinnendael/Drone_project"
+        target="_blank"
+        class="hover:text-blue-500 duration-100 flex items-center"
+        >View Code<ChevronRight size={16} /></a
+      >
+    </div>
+    <div class="mt-4 flex flex-col gap-4">
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Problem
+        </h2>
+        <p>
+          For my Graduation project my group and I had to make a project that
+          was about detecting planes inside a point cloud, in order to get
+          information about all the planes in a point cloud.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Built with
+        </h2>
+        <p>The application is seperated into 2 parts:</p>
+        <li>
+          The desktop application that was made in Pyton using the PyQt5
+          library.
+        </li>
+        <li>
+          The model that will actually process the point cloud was made with
+          Python.
+        </li>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Process
+        </h2>
+        <li>Load the point cloud.</li>
+        <li>Use RANSAC to detect planes.</li>
+        <li>
+          Possibly cluster using a cluster strategy like DBSCAN or agglomerative
+          clustering, using no clustering is also possible.
+        </li>
+        <li>Save each of the planes as a .ply file.</li>
+        <li>
+          Generate a color range for each plane and save the entire point cloud
+          with the colors.
+        </li>
+        <li>Calculate the surface area of each plane.</li>
+        <li>Write the info for each plane to a .csv file.</li>
+      </div>
+
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Screenshots
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <img class="rounded-lg" src={DroneImage.src} alt="Noted screenshot" />
+          <img
+            class="rounded-lg"
+            src={DroneImage2.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={DroneImage3.src}
+            alt="Noted screenshot"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

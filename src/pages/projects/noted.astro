@@ -1,0 +1,159 @@
+---
+import {
+  EditorJSIcon,
+  ElectronIcon,
+  FirebaseIcon,
+  ReactIcon,
+  TypeScriptIcon,
+} from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import NotedImage from "@/assets/images/noted/noted2.webp"
+import NotedImage2 from "@/assets/images/noted/noted3.webp"
+import NotedImage3 from "@/assets/images/noted/noted4.webp"
+import NotedImage4 from "@/assets/images/noted/noted5.webp"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+      >
+        <ChevronLeft size={16} /> back</a
+      >
+    </div>
+    <video
+      class="w-full h-full rounded-lg"
+      autoplay
+      loop
+      muted
+      playsinline
+      src="/public/videos/noted.mp4"></video>
+    <h1
+      class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2"
+    >
+      Noted
+    </h1>
+    <div class="my-2 flex gap-2 flex-wrap">
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1">
+        <ElectronIcon /> Electron
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <ReactIcon width={24} height={24} /> React
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <EditorJSIcon width={24} height={24} /> Editor.js
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <TypeScriptIcon width={24} height={24} /> TypeScript
+      </div><div
+        class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center"
+      >
+        <FirebaseIcon width={24} height={24} /> Firebase
+      </div>
+    </div>
+    <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+      Note taking app inspired by Notion and Obsidian.
+    </p>
+    <div class="flex gap-2 mt-2">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+        ><a href="https://write-noted.vercel.app/download" target="_blank"
+          >Download</a
+        ></Button
+      >
+      <a
+        href="https://github.com/BryanVanWinnendael/Noted"
+        target="_blank"
+        class="hover:text-blue-500 duration-100 flex items-center"
+        >View Code <ChevronRight size={16} /></a
+      >
+    </div>
+    <div class="mt-4 flex flex-col gap-4">
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Overview
+        </h2>
+        <p>
+          Noted is a combination of notion and obsidian with an inspired style
+          by arc browser. It is a note taking app that allows you to write notes
+          in block-style just like notion.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Customize
+        </h2>
+        <p>
+          With the customizations, like obsidian, you can fully customize your
+          application. Don't like the default theme? Change it! Don't like the
+          font? Change it!
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Built with
+        </h2>
+        <p>Noted is built with Electron, React, Editor.js and Firebase.</p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Features
+        </h2>
+        <p>
+          For a list of all the features, please visit the
+          <a
+            target="_blank"
+            href="https://github.com/BryanVanWinnendael/Noted"
+            class="underline text-blue-500">github page</a
+          >
+          or
+          <a
+            target="_blank"
+            href="https://write-noted.vercel.app/docs"
+            class="underline text-blue-500"
+          >
+            Noted Docs
+          </a>.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Screenshots
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <img class="rounded-lg" src={NotedImage.src} alt="Noted screenshot" />
+          <img
+            class="rounded-lg"
+            src={NotedImage2.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={NotedImage3.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={NotedImage4.src}
+            alt="Noted screenshot"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

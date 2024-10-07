@@ -1,0 +1,125 @@
+---
+import { GoIcon, HtmxIcon, PyQtIcon, PythonIcon } from "@/components/icons"
+import { Button } from "@/components/ui/button"
+import Layout from "@/layouts/Layout.astro"
+
+import HarborImage from "@/assets/images/harbor/harbor1.webp"
+import HarborImage2 from "@/assets/images/harbor/harbor2.webp"
+import HarborImage3 from "@/assets/images/harbor/harbor3.webp"
+import HarborImage4 from "@/assets/images/harbor/harbor4.webp"
+import { ChevronLeft } from "lucide-react"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="w-full mb-2">
+      <a
+        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center"
+        onclick="window.history.back(); return false;"
+        ><ChevronLeft size={16} /> back</a
+      >
+    </div>
+    <video
+      class="w-full h-full rounded-lg"
+      autoplay
+      loop
+      muted
+      playsinline
+      src="/public/videos/harbor.mp4"></video>
+    <h1
+      class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2"
+    >
+      Harbor
+    </h1>
+    <div class="my-2 flex gap-2 flex-wrap">
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <GoIcon width={24} height={24} /> Go
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <HtmxIcon width={24} height={24} /> Htmx
+      </div>
+    </div>
+    <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+      Docker container manager for local development.
+    </p>
+    <div class="flex gap-2 mt-2">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
+        ><a href="https://github.com/BryanVanWinnendael/Harbor" target="_blank"
+          >View Code</a
+        ></Button
+      >
+    </div>
+    <div class="mt-4 flex flex-col gap-4">
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Overview
+        </h2>
+        <p>
+          Harbor is a web application designed for Docker container management
+          on your server. It simplifies container operations like creating,
+          starting, stopping, and deleting through a user-friendly interface.
+          Harbor also allows executing commands within containers, streamlining
+          application management. It facilitates Docker image handling, supports
+          MySQL database creation, offers analytics for resource monitoring, and
+          includes cleanup tools for efficient Docker environment maintenance.
+          Overall, Harbor enhances control and efficiency in managing
+          containerized applications on your server infrastructure.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Use
+        </h2>
+        <p>
+          Clone the <a
+            class="underline text-blue-500"
+            href="https://github.com/BryanVanWinnendael/Harbor"
+            target="_blank">repository</a
+          > and follow the instructions in the README to run the application.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Built with
+        </h2>
+        <p>Harbor is built with Go, Air, SQLite, Tailwind CSS and Htmx.</p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Screenshots
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <img
+            class="rounded-lg"
+            src={HarborImage.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={HarborImage2.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={HarborImage3.src}
+            alt="Noted screenshot"
+          />
+          <img
+            class="rounded-lg"
+            src={HarborImage4.src}
+            alt="Noted screenshot"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
