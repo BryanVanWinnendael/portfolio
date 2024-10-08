@@ -42,6 +42,7 @@ export const DATA = {
       className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] ",
       background: (
         <video
+          style={{ viewTransitionName: "noted" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -61,6 +62,7 @@ export const DATA = {
       className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] ",
       background: (
         <video
+          style={{ viewTransitionName: "drone" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -79,6 +81,7 @@ export const DATA = {
       className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] bg-white",
       background: (
         <video
+          style={{ viewTransitionName: "harbor" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -99,6 +102,7 @@ export const DATA = {
       className: "lg:col-span-3 lg:col-span-3 lg:row-span-3 h-full",
       background: (
         <video
+          style={{ viewTransitionName: "noted" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -118,6 +122,7 @@ export const DATA = {
         "lg:col-start-1 lg:col-end-3 lg:row-start-4 lg:row-end-6 h-full",
       background: (
         <video
+          style={{ viewTransitionName: "drone" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -137,6 +142,7 @@ export const DATA = {
         "lg:col-start-3 lg:col-end-3 lg:row-start-4 lg:row-end-6 h-full w-full",
       background: (
         <video
+          style={{ viewTransitionName: "harbor" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -156,6 +162,7 @@ export const DATA = {
         "lg:col-start-1 lg:col-end-2 lg:row-start-6 lg:row-end-8 h-full w-full",
       background: (
         <video
+          style={{ viewTransitionName: "unimail" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -175,6 +182,7 @@ export const DATA = {
         "lg:col-start-2 lg:col-end-3 lg:row-start-6 lg:row-end-8 h-full",
       background: (
         <video
+          style={{ viewTransitionName: "zap" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           autoPlay
           loop
@@ -194,6 +202,7 @@ export const DATA = {
         "lg:col-start-3 lg:col-end-4 lg:row-start-6 lg:row-end-9 h-full",
       background: (
         <img
+          style={{ viewTransitionName: "momez" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           src={MomezImage.src}
         />
@@ -209,6 +218,7 @@ export const DATA = {
         "lg:col-start-1 lg:col-end-2 lg:row-start-8 lg:row-end-11 h-full",
       background: (
         <img
+          style={{ viewTransitionName: "twitter" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           src={TwitterImage.src}
         />
@@ -224,6 +234,7 @@ export const DATA = {
         "lg:col-start-2 lg:col-end-3 lg:row-start-8 lg:row-end-11 h-full",
       background: (
         <img
+          style={{ viewTransitionName: "wrapped" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           src={WrappedImage.src}
         />
@@ -239,6 +250,7 @@ export const DATA = {
         "lg:col-start-3 lg:col-end-4 lg:row-start-9 lg:row-end-11 h-full",
       background: (
         <img
+          style={{ viewTransitionName: "chatly" }}
           className="absolute left-0 top-0 h-full w-full border-none transition-all duration-300 ease-out opacity-70 [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105 object-cover"
           src={ChatlyImage.src}
         />

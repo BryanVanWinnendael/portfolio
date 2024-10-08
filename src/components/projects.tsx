@@ -10,7 +10,7 @@ const Projects = () => {
       </h1>
       <div className="mt-4 flex flex-col h-full gap-4">
         {DATA.projectsPreview.map((project) => (
-          <BentoCard {...project} />
+          <BentoCard key={project.name} {...project} />
         ))}
       </div>
       <a

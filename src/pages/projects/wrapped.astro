@@ -21,7 +21,11 @@ import { ChevronLeft } from "lucide-react"
         ><ChevronLeft size={16} /> back</a
       >
     </div>
-    <img class="w-full h-full rounded-lg" src={WrappedImage.src} />
+    <img
+      transition:name="wrapped"
+      class="w-full h-full rounded-lg"
+      src={WrappedImage.src}
+    />
   </main>
   <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2">
     Wrapped Now
