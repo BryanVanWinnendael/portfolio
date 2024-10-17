@@ -10,18 +10,14 @@ import MomezImage4 from "@/assets/images/momez/momez4.webp"
 import MomezImage5 from "@/assets/images/momez/momez5.webp"
 import MomezImage6 from "@/assets/images/momez/momez6.webp"
 import MomezImage7 from "@/assets/images/momez/momez7.webp"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import BackButton from "@/components/backButton"
 ---
 
 <Layout title="Momez | Bryan Van Winnendael">
   <main>
     <div class="w-full mb-2">
-      <a
-        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center w-fit"
-        onclick="window.history.back(); return false;"
-      >
-        <ChevronLeft size={16} /> back</a
-      >
+      <BackButton client:load />
     </div>
     <img
       transition:name="momez"

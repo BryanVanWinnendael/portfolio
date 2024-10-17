@@ -6,17 +6,14 @@ import Layout from "@/layouts/Layout.astro"
 import DroneImage from "@/assets/images/drone/drone2.webp"
 import DroneImage2 from "@/assets/images/drone/drone3.webp"
 import DroneImage3 from "@/assets/images/drone/drone4.webp"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import BackButton from "@/components/backButton"
 ---
 
 <Layout title="Point Cloud Processor | Bryan Van Winnendael">
   <main>
     <div class="w-full mb-2">
-      <a
-        class="hover:text-blue-500 duration-100 cursor-pointer flex items-center w-fit"
-        onclick="window.history.back(); return false;"
-        ><ChevronLeft size={16} />back</a
-      >
+      <BackButton client:load />
     </div>
     <video
       transition:name="drone"
