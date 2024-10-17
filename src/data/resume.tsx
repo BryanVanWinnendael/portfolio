@@ -19,6 +19,7 @@ export const DATA = {
         "Architected and implemented the front-end interface using Next.js",
         "Collaborated closely with team members to gather requirements, refine design specifications, and iterate on features throughout the development lifecycle",
       ],
+      url: "https://www.imec.be",
     },
   ],
   education: [
@@ -31,6 +32,7 @@ export const DATA = {
       description: [
         "For three years I studied applied computer science at UCLL and graduated in 2023 with a cum laude.",
       ],
+      url: "https://www.ucll.be",
     },
   ],
   projectsPreview: [

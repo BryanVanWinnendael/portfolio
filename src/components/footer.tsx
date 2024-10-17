@@ -6,10 +6,25 @@ const Footer = () => {
       <hr className="bg-white mb-4" />
       <div className="flex flex-col items-center">
         <p>@{year} Bryan Van Winnendael | Belgium</p>
-        <div className="flex flex-wrap gap-2">
-          <a href="/">Home</a>
-          <a href="/projects">Projects</a>
-          <a href="/contact">Contact</a>
+        <div className="flex flex-wrap gap-2 text-gray-500">
+          <a
+            className="hover:text-black dark:hover:text-white duration-100"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            className="hover:text-black dark:hover:text-white duration-100"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            className="hover:text-black dark:hover:text-white duration-100"
+            href="/contact"
+          >
+            Contact
+          </a>
         </div>
         <p>
           Built with{" "}

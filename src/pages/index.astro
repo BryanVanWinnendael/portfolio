@@ -4,13 +4,15 @@ import Layout from "../layouts/Layout.astro"
 import Projects from "@/components/projects"
 import Experience from "@/components/experience"
 import Education from "@/components/education"
+import About from "@/components/about"
 ---
 
 <Layout title="Home | Bryan Van Winnendael">
   <main>
     <Hero />
-    <Experience client:load />
-    <Education client:load />
+    <About client:load />
+    <!-- <Experience client:load />
+    <Education client:load /> -->
     <Projects client:load />
   </main>
 </Layout>

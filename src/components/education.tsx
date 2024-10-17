@@ -1,25 +1,37 @@
 import { DATA } from "@/data/resume"
-import { ResumeCard } from "./resumeCard"
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 const Education = () => {
   return (
-    <div className="mt-8">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        Education
-      </h1>
-      <div className="mt-4">
-        {DATA.education.map((work) => (
-          <ResumeCard
-            key={work.company}
-            logoUrl={work.logoUrl}
-            altText={work.company}
-            title={work.company}
-            subtitle={work.title}
-            period={`${work.start} - ${work.end ?? "Present"}`}
-            description={work.description}
-          />
+    <div className="border rounded-lg px-10 h-fit">
+      <ol className="relative border-s border-gray-200 dark:border-gray-500 h-full">
+        {DATA.education.map((education) => (
+          <li className="ms-4 pl-4">
+            <a target="_blank" href={education.url}>
+              <Avatar className="border w-12 h-12 bg-muted-background dark:bg-foreground absolute mt-1.5 -start-6">
+                <AvatarImage
+                  src={education.logoUrl}
+                  alt={education.company}
+                  className="object-contain"
+                />
+                <AvatarFallback>{education.company[0]}</AvatarFallback>
+              </Avatar>
+            </a>
+            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              {education.start} - {education.end ?? "Present"}
+            </time>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex gap-2 items-center">
+              {education.company}
+            </h3>
+            <h4 className="text-gray-500">{education.title}</h4>
+            <ul className="list-disc [&>li]:mt-2 pl-5 pb-4">
+              {education.description.map((desc, id) => (
+                <li key={id}>{desc}</li>
+              ))}
+            </ul>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   )
 }
