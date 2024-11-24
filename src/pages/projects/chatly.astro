@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import Layout from "@/layouts/Layout.astro"
 
 import ChatlyImage from "@/assets/images/chatly/chatly.webp"
-import { ChevronRight, Github, Globe } from "lucide-react"
+import { Github, Globe } from "lucide-react"
 import BackButton from "@/components/backButton"
 ---
 
@@ -24,13 +24,13 @@ import BackButton from "@/components/backButton"
   </h1>
   <div class="my-2 flex gap-2 flex-wrap">
     <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
-      <NextJSIcon width={24} height={24} /> Next.js
+      <NextJSIcon width={16} height={16} /> Next.js
     </div>
     <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
-      <SupabaseIcon width={20} height={20} /> Supabase
+      <SupabaseIcon width={16} height={16} /> Supabase
     </div>
     <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
-      <PrismaIcon width={20} height={20} /> Prisma
+      <PrismaIcon width={16} height={16} /> Prisma
     </div>
   </div>
   <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
@@ -48,7 +48,7 @@ import BackButton from "@/components/backButton"
     <a href="https://github.com/BryanVanWinnendael/Chatly" target="_blank">
       <Button
         variant="outline"
-        className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+        className="font-semibold size-fit flex items-center justify-center gap-2"
         ><Github size={16} />Source
       </Button>
     </a>
