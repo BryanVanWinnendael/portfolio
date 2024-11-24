@@ -10,6 +10,7 @@ import WrappedImage4 from "@/assets/images/wrapped/wrapped4.webp"
 import WrappedImage5 from "@/assets/images/wrapped/wrapped5.webp"
 import WrappedImage6 from "@/assets/images/wrapped/wrapped6.webp"
 import BackButton from "@/components/backButton"
+import { Github } from "lucide-react"
 ---
 
 <Layout title="Wrapped Now | Bryan Van Winnendael">
@@ -38,13 +39,13 @@ import BackButton from "@/components/backButton"
     See your spotify wrapped any time of the year.
   </p>
   <div class="flex gap-2 mt-2">
-    <Button
-      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-      ><a
-        href="https://github.com/BryanVanWinnendael/Wrapped-Now"
-        target="_blank">View Code</a
-      ></Button
-    >
+    <a href="https://github.com/BryanVanWinnendael/Wrapped-Now" target="_blank">
+      <Button
+        variant="outline"
+        className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+        ><Github size={16} />Source
+      </Button>
+    </a>
   </div>
   <div class="mt-4 flex flex-col gap-4">
     <div>

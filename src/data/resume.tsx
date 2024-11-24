@@ -41,7 +41,7 @@ export const DATA = {
       description: "Note taking app inspired by Notion and Obsidian.",
       href: "/projects/noted",
       cta: "Learn more",
-      className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] ",
+      className: "min-h-[200px] md:min-h-[300px] lg:min-h-[400px]",
       background: (
         <video
           style={{ viewTransitionName: "noted" }}
@@ -61,7 +61,7 @@ export const DATA = {
         " Desktop application for detecting planes in a point cloud.",
       href: "/projects/drone",
       cta: "Learn more",
-      className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] ",
+      className: "min-h-[200px] md:min-h-[300px] lg:min-h-[400px]",
       background: (
         <video
           style={{ viewTransitionName: "drone" }}
@@ -80,7 +80,7 @@ export const DATA = {
       description: "Docker container manager for local development.",
       href: "/projects/harbor",
       cta: "Learn more",
-      className: "min-h-[300px] md:min-h-[400px] lg:min-h-[500px] bg-white",
+      className: "min-h-[200px] md:min-h-[300px] lg:min-h-[400px]",
       background: (
         <video
           style={{ viewTransitionName: "harbor" }}

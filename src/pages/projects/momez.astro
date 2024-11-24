@@ -10,7 +10,7 @@ import MomezImage4 from "@/assets/images/momez/momez4.webp"
 import MomezImage5 from "@/assets/images/momez/momez5.webp"
 import MomezImage6 from "@/assets/images/momez/momez6.webp"
 import MomezImage7 from "@/assets/images/momez/momez7.webp"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Github, Globe } from "lucide-react"
 import BackButton from "@/components/backButton"
 ---
 
@@ -43,16 +43,21 @@ import BackButton from "@/components/backButton"
     Social media platform for sharing pictures.
   </p>
   <div class="flex gap-2 mt-2">
-    <Button
-      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-      ><a href="http://141.145.200.72:8080/" target="_blank">Visit</a></Button
-    >
-    <a
-      href="https://github.com/BryanVanWinnendael/Momez"
-      target="_blank"
-      class="hover:text-blue-500 duration-100 flex items-center"
-      >View Code <ChevronRight size={16} /></a
-    >
+    <a href="http://141.145.200.72:8080/" target="_blank">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 flex items-center justify-center gap-2"
+      >
+        <Globe size={16} />
+        Visit
+      </Button>
+    </a>
+    <a href="https://github.com/BryanVanWinnendael/Momez" target="_blank">
+      <Button
+        variant="outline"
+        className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+        ><Github size={16} />Source
+      </Button>
+    </a>
   </div>
   <div class="mt-4 flex flex-col gap-4">
     <div>

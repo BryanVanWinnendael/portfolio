@@ -7,7 +7,7 @@ import ZapImage from "@/assets/images/zap/zap2.webp"
 import ZapImage2 from "@/assets/images/zap/zap3.webp"
 import ZapImage3 from "@/assets/images/zap/zap4.webp"
 import ZapImage4 from "@/assets/images/zap/zap5.webp"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Github, Globe } from "lucide-react"
 import BackButton from "@/components/backButton"
 ---
 
@@ -44,19 +44,24 @@ import BackButton from "@/components/backButton"
       Desktop application for searching folders and files.
     </p>
     <div class="flex gap-2 mt-2">
-      <Button
-        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-        ><a
-          href="https://github.com/BryanVanWinnendael/Zap/releases"
-          target="_blank">Download</a
-        ></Button
-      >
       <a
-        href="https://github.com/BryanVanWinnendael/Zap"
+        href="https://github.com/BryanVanWinnendael/Zap/releases"
         target="_blank"
-        class="hover:text-blue-500 duration-100 flex items-center"
-        >View Code <ChevronRight size={16} /></a
       >
+        <Button
+          className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 flex items-center justify-center gap-2"
+        >
+          <Globe size={16} />
+          Download
+        </Button>
+      </a>
+      <a href="https://github.com/BryanVanWinnendael/Zap" target="_blank">
+        <Button
+          variant="outline"
+          className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+          ><Github size={16} />Source
+        </Button>
+      </a>
     </div>
     <div class="mt-4 flex flex-col gap-4">
       <div>

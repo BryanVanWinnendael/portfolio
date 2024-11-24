@@ -13,8 +13,9 @@ import NotedImage from "@/assets/images/noted/noted2.webp"
 import NotedImage2 from "@/assets/images/noted/noted3.webp"
 import NotedImage3 from "@/assets/images/noted/noted4.webp"
 import NotedImage4 from "@/assets/images/noted/noted5.webp"
-import { ChevronRight } from "lucide-react"
+
 import BackButton from "@/components/backButton"
+import { Github, Globe } from "lucide-react"
 ---
 
 <Layout title="Noted | Bryan Van Winnendael">
@@ -57,18 +58,21 @@ import BackButton from "@/components/backButton"
       Note taking app inspired by Notion and Obsidian.
     </p>
     <div class="flex gap-2 mt-2">
-      <Button
-        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-        ><a href="https://write-noted.vercel.app/download" target="_blank"
-          >Download</a
-        ></Button
-      >
-      <a
-        href="https://github.com/BryanVanWinnendael/Noted"
-        target="_blank"
-        class="hover:text-blue-500 duration-100 flex items-center"
-        >View Code <ChevronRight size={16} /></a
-      >
+      <a href="https://write-noted.vercel.app/download" target="_blank">
+        <Button
+          className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 flex items-center justify-center gap-2"
+        >
+          <Globe size={16} />
+          Download
+        </Button>
+      </a>
+      <a href="https://github.com/BryanVanWinnendael/Noted" target="_blank">
+        <Button
+          variant="outline"
+          className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+          ><Github size={16} />Source
+        </Button>
+      </a>
     </div>
     <div class="mt-4 flex flex-col gap-4">
       <div>

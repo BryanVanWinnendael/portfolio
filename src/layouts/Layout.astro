@@ -4,6 +4,7 @@ import "@/styles/globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/footer"
 import { ViewTransitions } from "astro:transitions"
+import Particles from "@/components/ui/particles"
 
 interface Props {
   title: string
@@ -51,12 +52,19 @@ const { title } = Astro.props
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="min-h-screen bg-background font-sans antialiased text-[125%]">
+  <body class="min-h-screen bg-background font-sans antialiased relative">
     <Nav client:load />
-    <div class="max-w-[50rem] mx-auto px-6 pb-12 pt-24">
+    <div class="max-w-[40rem] mx-auto px-6 pb-12 pt-24 relative z-10">
       <slot />
       <Footer />
     </div>
+    <Particles
+      className="absolute inset-0 z-0"
+      quantity={100}
+      ease={50}
+      refresh={false}
+      client:load
+    />
     <Toaster client:load />
   </body>
 </html>

@@ -7,7 +7,7 @@ import TwitterImage from "@/assets/images/twitter/twitter.webp"
 import TwitterImage2 from "@/assets/images/twitter/twitter2.webp"
 import TwitterImage3 from "@/assets/images/twitter/twitter3.webp"
 import TwitterImage4 from "@/assets/images/twitter/twitter4.webp"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Github, Globe } from "lucide-react"
 import BackButton from "@/components/backButton"
 ---
 
@@ -40,16 +40,24 @@ import BackButton from "@/components/backButton"
     Clone of the popular social media platform Twitter.
   </p>
   <div class="flex gap-2 mt-2">
-    <Button
-      className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-      ><a href="http://141.145.200.72:4000/" target="_blank">Visit</a></Button
-    >
+    <a href="http://141.145.200.72:4000/" target="_blank">
+      <Button
+        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 flex items-center justify-center gap-2"
+      >
+        <Globe size={16} />
+        Visit
+      </Button>
+    </a>
     <a
       href="https://github.com/BryanVanWinnendael/TwitterClone"
       target="_blank"
-      class="hover:text-blue-500 duration-100 flex items-center"
-      >View Code <ChevronRight size={16} /></a
     >
+      <Button
+        variant="outline"
+        className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+        ><Github size={16} />Source
+      </Button>
+    </a>
   </div>
   <div class="mt-4 flex flex-col gap-4">
     <div>

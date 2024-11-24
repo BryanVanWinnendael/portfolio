@@ -14,7 +14,7 @@ import MailImage3 from "@/assets/images/unimail/unimail3.webp"
 import MailImage4 from "@/assets/images/unimail/unimail4.webp"
 import MailImage5 from "@/assets/images/unimail/unimail5.webp"
 import MailImage6 from "@/assets/images/unimail/unimail6.webp"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Github, Globe } from "lucide-react"
 import BackButton from "@/components/backButton"
 ---
 
@@ -55,16 +55,21 @@ import BackButton from "@/components/backButton"
       interface.
     </p>
     <div class="flex gap-2 mt-2">
-      <Button
-        className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 text-lg"
-        ><a href="https://unimail.vercel.app/" target="_blank">Visit</a></Button
-      >
-      <a
-        href="https://github.com/BryanVanWinnendael/UniMail"
-        target="_blank"
-        class="hover:text-blue-500 duration-100 flex items-center"
-        >View Code <ChevronRight size={16} /></a
-      >
+      <a href="https://unimail.vercel.app/" target="_blank">
+        <Button
+          className="bg-blue-500 text-white font-semibold hover:bg-blue-500/90 flex items-center justify-center gap-2"
+        >
+          <Globe size={16} />
+          Visit
+        </Button>
+      </a>
+      <a href="https://github.com/BryanVanWinnendael/UniMail" target="_blank">
+        <Button
+          variant="outline"
+          className="text-white font-semibold size-fit flex items-center justify-center gap-2"
+          ><Github size={16} />Source
+        </Button>
+      </a>
     </div>
     <div class="mt-4 flex flex-col gap-4">
       <div>
