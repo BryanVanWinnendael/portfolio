@@ -20,6 +20,7 @@ export const DATA = {
         "Collaborated closely with team members to gather requirements, refine design specifications, and iterate on features throughout the development lifecycle",
       ],
       url: "https://www.imec.be",
+      viewMore: "imec",
     },
   ],
   education: [

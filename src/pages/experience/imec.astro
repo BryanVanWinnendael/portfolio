@@ -1,0 +1,127 @@
+---
+import {
+  PythonIcon,
+  DockerIcon,
+  NextJSIcon,
+  FastApiIcon,
+  TypeScriptIcon,
+  AzureADIcon,
+} from "@/components/icons"
+import Layout from "@/layouts/Layout.astro"
+
+import ImecImage from "@/assets/images/imec/imec.webp"
+import ImecImage2 from "@/assets/images/imec/imec2.webp"
+import ImecImage3 from "@/assets/images/imec/imec3.webp"
+import ImecImage4 from "@/assets/images/imec/imec4.webp"
+import ImecImage5 from "@/assets/images/imec/imec5.webp"
+import ImecImage6 from "@/assets/images/imec/imec6.webp"
+import ImecImage7 from "@/assets/images/imec/imec7.webp"
+import ImecImage8 from "@/assets/images/imec/imec8.webp"
+import ImecImage9 from "@/assets/images/imec/imec9.webp"
+
+import BackButton from "@/components/backButton"
+---
+
+<Layout title="Noted | Bryan Van Winnendael">
+  <main>
+    <div class="w-full mb-2">
+      <BackButton client:load />
+    </div>
+
+    <h1
+      class="text-4xl font-extrabold tracking-tight lg:text-5xl text-left mt-2"
+    >
+      Netweb (intern at Imec)
+    </h1>
+    <div class="my-2 flex gap-2 flex-wrap">
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <PythonIcon width={16} height={16} /> Python
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <FastApiIcon width={16} height={16} /> FastAPI
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <NextJSIcon width={16} height={16} /> Next.js
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <TypeScriptIcon width={16} height={16} /> TypeScript
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <DockerIcon width={16} height={16} /> Docker
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <AzureADIcon width={16} height={16} /> Azure AD
+      </div>
+    </div>
+    <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
+      Intern web application for <a
+        href="https://www.imec.be"
+        target="_blank"
+        class="text-blue-500">Imec</a
+      >
+    </p>
+
+    <div class="mt-4 flex flex-col gap-4">
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Overview
+        </h2>
+        <p>
+          For my intern at Imec, I worked on a web application that is used to
+          do a host lookup, create guest accounts for the network, manage ports
+          and more.
+        </p>
+      </div>
+
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Built with
+        </h2>
+        <p>
+          Netweb is built with FastAPI, Next.js, Python, TypeScript, Docker and
+          Azure AD for authentication and data extraction.
+        </p>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Features
+        </h2>
+        <ul class="list-disc [&>li]:mt-2 pl-5">
+          <li>Host lookup</li>
+          <li>Port management</li>
+          <li>Guest account creation</li>
+          <li>Azure NICs viewer</li>
+          <li>ACI endpoints viewer</li>
+          <li>ACI endpoints viewer</li>
+          <li>Switch manager</li>
+          <li>ISE lookup</li>
+          <li>SSL exceptions</li>
+        </ul>
+      </div>
+      <div>
+        <h2
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
+          Screenshots
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <img class="rounded-lg" src={ImecImage.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage2.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage3.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage4.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage5.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage6.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage7.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage8.src} alt="Noted screenshot" />
+          <img class="rounded-lg" src={ImecImage9.src} alt="Noted screenshot" />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -95,11 +95,11 @@ const ContactForm = () => {
           name="text"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Text</FormLabel>
+              <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
                   className="min-h-52 bg-background border-foreground/40"
-                  placeholder="Message"
+                  placeholder="Type here..."
                   {...field}
                 />
               </FormControl>

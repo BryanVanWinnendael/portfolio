@@ -1,6 +1,6 @@
 import { DATA } from "@/data/resume"
 import { BentoCard } from "./ui/bento-grid"
-import { CheckIcon, ChevronRight, ChevronRightIcon } from "lucide-react"
+import { ChevronRightIcon } from "lucide-react"
 import { AnimatedHref } from "./ui/animated-href"
 
 const Projects = () => {

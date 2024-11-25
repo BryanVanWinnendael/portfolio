@@ -1,19 +1,24 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config"
 
-import react from '@astrojs/react';
+import react from "@astrojs/react"
 
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind"
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from "@astrojs/vercel/serverless"
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), 
+  prefetch: {
+    prefetchAll: true,
+  },
+  integrations: [
+    react(),
     tailwind({
       applyBaseStyles: false,
-  }),],
+    }),
+  ],
 
-  output: 'server',
+  output: "server",
   adapter: vercel(),
-});
+})
