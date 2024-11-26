@@ -7,8 +7,8 @@ const Experience = () => {
   return (
     <div className="border rounded-lg px-10 h-fit">
       <ol className="relative border-s border-gray-200 dark:border-gray-500 h-full">
-        {DATA.work.map((work) => (
-          <li className="ms-4 pl-4">
+        {DATA.work.map((work, key) => (
+          <li className="ms-4 pl-4" key={key}>
             <a target="_blank" href={work.url}>
               <Avatar className="border w-12 h-12 bg-muted-background dark:bg-foreground absolute mt-1.5 -start-6">
                 <AvatarImage

@@ -5,8 +5,8 @@ const Education = () => {
   return (
     <div className="border rounded-lg px-10 h-fit">
       <ol className="relative border-s border-gray-200 dark:border-gray-500 h-full">
-        {DATA.education.map((education) => (
-          <li className="ms-4 pl-4">
+        {DATA.education.map((education, key) => (
+          <li className="ms-4 pl-4" key={key}>
             <a target="_blank" href={education.url}>
               <Avatar className="border w-12 h-12 bg-muted-background dark:bg-foreground absolute mt-1.5 -start-6">
                 <AvatarImage

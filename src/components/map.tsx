@@ -50,7 +50,7 @@ const Map = () => {
   }, [API_KEY, lng, lat, zoom])
 
   return (
-    <div className="map-wrap h-64 group relative rounded overflow-hidden [mask-image:linear-gradient(to_top,transparent_15%,#000_20%)]">
+    <div className="map-wrap sm:h-64 h-52 group relative rounded overflow-hidden sm:[mask-image:linear-gradient(to_top,transparent_15%,#000_20%)] [mask-image:linear-gradient(to_top,transparent_18%,#000_20%)]">
       <div ref={mapContainer} className="absolute size-full" />
 
       <span
