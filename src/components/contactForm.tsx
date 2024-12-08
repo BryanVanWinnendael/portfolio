@@ -16,6 +16,7 @@ import { Textarea } from "./ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { useState } from "react"
 import { Loader2 } from "lucide-react"
+import { motion } from "framer-motion"
 
 const sendmail = async (values: z.infer<typeof formSchema>) => {
   try {
@@ -71,58 +72,69 @@ const ContactForm = () => {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input
-                  className="bg-background border-foreground/40"
-                  placeholder="email@email.com"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input
+                    className="bg-background border-foreground/40"
+                    placeholder="email@email.com"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="text"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="min-h-52 bg-background border-foreground/40"
+                    placeholder="Type here..."
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          {loading ? (
+            <Button
+              disabled
+              variant="outline"
+              className="w-full text-secondary"
+            >
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              please wait
+            </Button>
+          ) : (
+            <Button
+              variant="default"
+              type="submit"
+              className="w-full text-secondary"
+            >
+              submit
+            </Button>
           )}
-        />
-        <FormField
-          control={form.control}
-          name="text"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  className="min-h-52 bg-background border-foreground/40"
-                  placeholder="Type here..."
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        {loading ? (
-          <Button disabled variant="outline" className="w-full text-secondary">
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            please wait
-          </Button>
-        ) : (
-          <Button
-            variant="default"
-            type="submit"
-            className="w-full text-secondary"
-          >
-            submit
-          </Button>
-        )}
-      </form>
-    </Form>
+        </form>
+      </Form>
+    </motion.div>
   )
 }
 

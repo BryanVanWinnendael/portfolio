@@ -2,17 +2,42 @@
 import Learning from "@/components/learning"
 import ProjectsBento from "@/components/projectsBento"
 import Layout from "@/layouts/Layout.astro"
+import { motion } from "framer-motion"
 ---
 
 <Layout title="Projects | Bryan Van Winnendael">
   <main class="flex flex-col gap-4">
-    <h1 class="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
-      My projects
-    </h1>
-    <ProjectsBento client:load />
-    <div class="border rounded-lg p-4">
-      <p>Want to see what I'm learning?</p>
-      <Learning client:load />
-    </div>
+    <motion.div
+      client:load
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h1 class="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
+        My projects
+      </h1>
+    </motion.div>
+    <motion.div
+      client:load
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
+      <ProjectsBento client:load />
+    </motion.div>
+    <motion.div
+      client:load
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
+      <div class="border rounded-lg p-4">
+        <p>Want to see what I'm learning?</p>
+        <Learning client:load />
+      </div>
+    </motion.div>
   </main>
 </Layout>

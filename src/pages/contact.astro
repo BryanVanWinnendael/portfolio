@@ -3,26 +3,44 @@ import ContactForm from "@/components/contactForm"
 import { CVIcon } from "@/components/icons"
 import Layout from "@/layouts/Layout.astro"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { motion } from "framer-motion"
 import { MailIcon } from "lucide-react"
 ---
 
 <Layout title="Contact | Bryan Van Winnendael">
   <main>
-    <h1 class="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
-      Contact me
-    </h1>
-    <div class="flex flex-wrap gap-2 my-4">
-      <a href="https://github.com/BryanVanWinnendael" target="_blank">
-        <GitHubLogoIcon width={24} height={24} /></a
-      >
-      <a href="https://linkedin.com/in/bryanvanwinnendael" target="_blank">
-        <LinkedInLogoIcon width={24} height={24} /></a
-      >
-      <a href="mailto:portfoliobryanvanwinnendael@gmail.com">
-        <MailIcon width={24} height={24} /></a
-      >
-      <a href="cv.pdf" target="_blank"> <CVIcon width={26} height={26} /></a>
-    </div>
+    <motion.div
+      client:load
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h1 class="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-2xl">
+        Contact me
+      </h1>
+    </motion.div>
+
+    <motion.div
+      client:load
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
+      <div class="flex flex-wrap gap-2 my-4">
+        <a href="https://github.com/BryanVanWinnendael" target="_blank">
+          <GitHubLogoIcon width={24} height={24} /></a
+        >
+        <a href="https://linkedin.com/in/bryanvanwinnendael" target="_blank">
+          <LinkedInLogoIcon width={24} height={24} /></a
+        >
+        <a href="mailto:portfoliobryanvanwinnendael@gmail.com">
+          <MailIcon width={24} height={24} /></a
+        >
+        <a href="cv.pdf" target="_blank"> <CVIcon width={26} height={26} /></a>
+      </div>
+    </motion.div>
     <ContactForm client:load />
   </main>
 </Layout>

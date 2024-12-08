@@ -4,13 +4,49 @@ import Layout from "../layouts/Layout.astro"
 import Projects from "@/components/projects"
 import Map from "@/components/map"
 import About from "@/components/about"
+import { motion } from "framer-motion"
 ---
 
 <Layout title="Home | Bryan Van Winnendael">
   <main>
-    <Map client:load />
-    <Hero />
-    <About client:load />
-    <Projects client:load />
+    <motion.div
+      client:load
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Map client:load />
+    </motion.div>
+
+    <motion.div
+      client:load
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <Hero />
+    </motion.div>
+
+    <motion.div
+      client:load
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
+      <About client:load />
+    </motion.div>
+
+    <motion.div
+      client:load
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <Projects client:load />
+    </motion.div>
   </main>
 </Layout>
