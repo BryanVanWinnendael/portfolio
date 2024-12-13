@@ -1,10 +1,14 @@
 ---
 import {
+  AstroIcon,
   EditorJSIcon,
   ElectronIcon,
+  FastApiIcon,
   FirebaseIcon,
+  NginxIcon,
   ReactIcon,
   TypeScriptIcon,
+  ZustandIcon,
 } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import Layout from "@/layouts/Layout.astro"
@@ -48,10 +52,21 @@ import { Github, Globe } from "lucide-react"
       </div>
       <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
         <TypeScriptIcon width={16} height={16} /> TypeScript
-      </div><div
-        class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center"
-      >
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <ZustandIcon width={24} height={24} /> Zustand
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <FastApiIcon width={16} height={16} /> FastAPI
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
         <FirebaseIcon width={16} height={16} /> Firebase
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <NginxIcon width={16} height={16} /> Nginx
+      </div>
+      <div class="flex gap-2 border w-fit rounded-lg px-2 py-1 items-center">
+        <AstroIcon width={16} height={16} /> Astro
       </div>
     </div>
     <p class="flex gap-2 items-center dark:text-gray-600 text-gray-400 mt-2">
@@ -84,7 +99,8 @@ import { Github, Globe } from "lucide-react"
         <p>
           Noted is a combination of notion and obsidian with an inspired style
           by arc browser. It is a note taking app that allows you to write notes
-          in block-style just like notion.
+          in block-style just like notion. It is supported on Windows, MacOS and
+          Linux.
         </p>
       </div>
       <div>
@@ -105,7 +121,11 @@ import { Github, Globe } from "lucide-react"
         >
           Built with
         </h2>
-        <p>Noted is built with Electron, React, Editor.js and Firebase.</p>
+        <p>
+          The desktop app is made with Electron, React, Editor.js and Zustand.
+          The Server is made with FastAPI, Firebase and Nginx. The Website is
+          made with Astro.
+        </p>
       </div>
       <div>
         <h2
