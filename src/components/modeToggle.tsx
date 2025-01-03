@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import { useStore } from "@nanostores/react"
 import { themeStore, setTheme } from "@/stores/themeStore"
 
-const modeToggle = () => {
+const ModeToggle = () => {
   const theme = useStore(themeStore)
 
   const handleChangeTheme = () => {
@@ -31,4 +31,4 @@ const modeToggle = () => {
   )
 }
 
-export default modeToggle
+export default ModeToggle

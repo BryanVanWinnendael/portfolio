@@ -10,8 +10,8 @@ const Map = () => {
   const mapContainer = useRef(null)
   const map = useRef<maplibregl.Map | null>(null)
   const markerRef = useRef<HTMLDivElement | null>(null)
-  const lng = 4.701625
-  const lat = 50.879044
+  const lng = 4.6438521
+  const lat = 50.8979511
   const zoom = 13
 
   useEffect(() => {
