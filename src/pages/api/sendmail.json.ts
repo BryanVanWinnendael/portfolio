@@ -76,6 +76,9 @@ const MAIL_TO_ADMIN = `<html lang='en'>
       </body>
       </html>`
 
+console.log("emailTo: ", emailTo)
+console.log("emailToPass: ", emailToPass)
+
 const mailTransporter = nodemailer.createTransport({
   host,
   port: 587,
