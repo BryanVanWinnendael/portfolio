@@ -39,9 +39,7 @@ const MAIL_TO_ADMIN = `<html lang='en'>
       </html>`
 
 const mailTransporter = nodemailer.createTransport({
-  host,
-  port: 587,
-  secure: false,
+  service: "gmail",
   auth: {
     user: emailTo,
     pass: emailToPass,

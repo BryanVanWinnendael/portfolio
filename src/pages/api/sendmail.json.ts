@@ -80,9 +80,7 @@ console.log("emailTo: ", emailTo)
 console.log("emailToPass: ", emailToPass)
 
 const mailTransporter = nodemailer.createTransport({
-  host,
-  port: 587,
-  secure: false,
+  service: "gmail",
   auth: {
     user: emailTo,
     pass: emailToPass,
