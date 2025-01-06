@@ -3,7 +3,6 @@ import nodemailer from "nodemailer"
 
 const emailTo = import.meta.env.EMAIL
 const emailToPass = import.meta.env.PASS
-const host = import.meta.env.HOST
 
 const MAIL_TO_ADMIN = `<html lang='en'>
       <head>
@@ -74,8 +73,6 @@ export const POST: APIRoute = async ({ request }) => {
     const formData = await request.json()
     const name = formData.name
     const drawing = formData.drawing
-    console.log("Name: ", name)
-    console.log("Drawing: ", drawing)
 
     // send mail to admin
     let sent = await sendMailToAdmin(name, drawing)

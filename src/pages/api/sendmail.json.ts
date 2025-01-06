@@ -3,7 +3,6 @@ import nodemailer from "nodemailer"
 
 const emailTo = import.meta.env.EMAIL
 const emailToPass = import.meta.env.PASS
-const host = import.meta.env.HOST
 
 const MAIL_TO_SENDER = `<html lang="en">
     <head>
