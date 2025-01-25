@@ -1,5 +1,7 @@
 import { DATA } from "@/data/resume"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+import { ChevronRightIcon } from "lucide-react"
+import { AnimatedHref } from "./ui/animated-href"
 
 const Education = () => {
   return (
@@ -29,6 +31,18 @@ const Education = () => {
                 <li key={id}>{desc}</li>
               ))}
             </ul>
+            <div className="py-2">
+              <AnimatedHref
+                color="#3b82f6"
+                text={
+                  <span className="group inline-flex items-center">
+                    Learn more{" "}
+                    <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                }
+                href="/education/ucll"
+              />
+            </div>
           </li>
         ))}
       </ol>

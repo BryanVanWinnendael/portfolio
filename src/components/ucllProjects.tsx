@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from "lucide-react"
 import { AnimatedHref } from "./ui/animated-href"
 
-const Learning = () => {
+const UcllProjects = () => {
   return (
     <AnimatedHref
       color="#3b82f6"
@@ -12,9 +12,9 @@ const Learning = () => {
           <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       }
-      href="https://github.com/BryanVanWinnendael/"
+      href="https://github.com/BryanVanWinnendael/ucll"
     />
   )
 }
 
-export default Learning
+export default UcllProjects
